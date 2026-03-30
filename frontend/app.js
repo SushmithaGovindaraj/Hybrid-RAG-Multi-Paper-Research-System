@@ -221,7 +221,10 @@ function attachEventListeners() {
     }
 }
 
-async function streamResponse(payload, aiMsgId) {
+    /**
+     * Consumes SSE stream for real-time model synthesis.
+     */
+    async function streamResponse(payload, aiMsgId) {
     const res = await fetch('/ask/stream', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
