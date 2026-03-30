@@ -278,7 +278,10 @@ function attachEventListeners() {
     });
 }
 
-async function deletePaper(paperId, e) {
+    /**
+     * Removes paper and associated vector indices.
+     */
+    async function deletePaper(paperId, e) {
     e.stopPropagation();
     if (!confirm('Remove this paper from the index?')) return;
 
