@@ -170,7 +170,10 @@ function attachEventListeners() {
     }, 1200);
 }
 
-async function handleSend() {
+    /**
+     * Orchestrates user query processing and message history.
+     */
+    async function handleSend() {
     const query = els.questionInput.value.trim();
     if (!query || state.isGenerating) return;
 
