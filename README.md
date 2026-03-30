@@ -21,3 +21,4 @@ Leverages FastAPI for streaming delivery and ChromaDB for vector persistence.
 ## Contact
 Developed by Sushmitha Govindaraj - [sushmitharaj2000@gmail.com](mailto:sushmitharaj2000@gmail.com)
 ### Project Status: Release Candidate 1
+## Technical Update 1
