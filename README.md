@@ -18,3 +18,5 @@ Leverages FastAPI for streaming delivery and ChromaDB for vector persistence.
 3. Launch uvicorn service.
 - Docker deployment planned for V2.
 - Support for local Ollama instances coming soon.
+## Contact
+Developed by Sushmitha Govindaraj - [sushmitharaj2000@gmail.com](mailto:sushmitharaj2000@gmail.com)
