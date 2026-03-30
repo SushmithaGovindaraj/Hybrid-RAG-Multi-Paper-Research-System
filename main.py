@@ -21,6 +21,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+"""
+Main entry point for the FastAPI research service.
+Handles SSE streams and vector database management.
+"""
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
