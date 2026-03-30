@@ -12,7 +12,7 @@
 
   --panel-h: 228;
   --panel-s: 18%;
-  --panel-l: 12%;
+  --panel-l: 13%;
   --panel: hsla(var(--panel-h), var(--panel-s), var(--panel-l), 0.7);
 
   --panel-border: hsla(0, 0%, 100%, 0.08);
