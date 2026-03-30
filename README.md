@@ -20,20 +20,3 @@ Leverages FastAPI for streaming delivery and ChromaDB for vector persistence.
 - Support for local Ollama instances coming soon.
 ## Contact
 Developed by Sushmitha Govindaraj - [sushmitharaj2000@gmail.com](mailto:sushmitharaj2000@gmail.com)
-### Project Status: Release Candidate 1
-## Technical Update 1
-## Technical Update 2
-## Technical Update 3
-## Technical Update 4
-## Technical Update 5
-## Technical Update 6
-## Technical Update 7
-## Technical Update 8
-## Technical Update 9
-## Technical Update 10
-## Technical Update 11
-## Technical Update 12
-## Technical Update 13
-## Technical Update 14
-## Technical Update 15
-## Technical Update 16
