@@ -3,6 +3,10 @@ PDF Processor — uses PyMuPDF (fitz) for precise page-level and section-level e
 Each chunk carries metadata: paper_id, filename, page_number, section, char_offset.
 """
 
+"""
+Transformation layer for PDF-to-Semantic-Fragments.
+Handles metadata extraction and normalization.
+"""
 import fitz  # PyMuPDF
 import re
 import os
