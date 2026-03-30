@@ -208,7 +208,7 @@ function attachEventListeners() {
             const payload = {
                 question: query,
                 paper_ids: state.selectedPaperIds.length > 0 ? state.selectedPaperIds : null,
-                top_k: 8,
+                top_k: 10,
             };
             await streamResponse(payload, aiMsgId);
         }
