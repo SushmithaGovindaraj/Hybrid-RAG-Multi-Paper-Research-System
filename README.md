@@ -7,3 +7,8 @@ Leverages FastAPI for streaming delivery and ChromaDB for vector persistence.
 - **Hybrid Retrieval:** Multi-stage reasoning over vectorized data.
 - **Streaming Response:** Low-latency SSE integration.
 - **Glassmorphism UI:** Modern analytical dashboard.
+## Technical Stack
+- **Backend:** Python, FastAPI, Anthropic/Google LLM
+- **Database:** ChromaDB (Vector store)
+- **Frontend:** Vanilla JavaScript, Modern CSS Variables
+- **Ingestion:** PyMuPDF, Sentence Transformers
