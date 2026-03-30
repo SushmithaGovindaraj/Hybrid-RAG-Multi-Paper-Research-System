@@ -7,7 +7,7 @@
   /* HSL-based palette for better harmony */
   --bg-h: 232;
   --bg-s: 15%;
-  --bg-l: 6%;
+  --bg-l: 7%;
   --bg: hsl(var(--bg-h), var(--bg-s), var(--bg-l));
 
   --panel-h: 228;
