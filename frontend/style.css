@@ -76,7 +76,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsla(0, 0%, 100%, 0.1);
+  background: hsla(0, 0%, 100%, 0.12);
   border-radius: 10px;
 }
 
@@ -1002,7 +1002,7 @@ textarea {
 }
 
 .filter-tag:hover {
-  background: hsla(0, 0%, 100%, 0.1);
+  background: hsla(0, 0%, 100%, 0.12);
   color: var(--text-primary);
 }
 
