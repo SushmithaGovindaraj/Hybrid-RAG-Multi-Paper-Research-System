@@ -263,7 +263,8 @@ async def ask_stream(req: AskRequest):
 
             # Stream LLM response token by token
             async for chunk in rp.stream_answer_async(req.question, hits, is_compare):
-                yield _sse({"type": "chunk", "text": chunk})
+                                    # Stream chunk to frontend
+                    yield _sse({"type": "chunk", "text": chunk})
 
             yield _sse({"type": "done"})
 
