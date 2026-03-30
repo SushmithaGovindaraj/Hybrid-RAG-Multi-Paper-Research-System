@@ -127,7 +127,10 @@ function attachEventListeners() {
     }
 }
 
-async function uploadFiles(files) {
+    /**
+     * Manages parallel file uploads and indexing status.
+     */
+    async function uploadFiles(files) {
     els.uploadProgress.classList.remove('hidden');
     const total = files.length;
     let done = 0;
