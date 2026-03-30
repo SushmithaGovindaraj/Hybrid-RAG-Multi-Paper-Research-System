@@ -16,3 +16,5 @@ Leverages FastAPI for streaming delivery and ChromaDB for vector persistence.
 1. Define .env with API keys.
 2. Install dependencies via pip.
 3. Launch uvicorn service.
+- Docker deployment planned for V2.
+- Support for local Ollama instances coming soon.
