@@ -843,7 +843,7 @@ textarea {
   background: var(--accent);
   top: -200px;
   left: -100px;
-  animation: float-1 20s infinite ease-in-out;
+  animation: float-1 25s infinite ease-in-out;
 }
 
 .orb-2 {
