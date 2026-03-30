@@ -694,6 +694,7 @@ body {
 }
 
 textarea {
+  transition: var(--transition-normal);
   width: 100%;
   background: transparent;
   border: none;
