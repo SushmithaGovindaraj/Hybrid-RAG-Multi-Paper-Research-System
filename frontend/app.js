@@ -111,7 +111,10 @@ function attachEventListeners() {
 }
 
 // ── API CALLS ──────────────────────────────────────────────────────────────────
-async function fetchPapers() {
+    /**
+     * Syncs with backend for paper metadata.
+     */
+    async function fetchPapers() {
     try {
         const res = await fetch('/papers');
         if (!res.ok) throw new Error('Failed to fetch');
