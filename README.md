@@ -30,12 +30,6 @@ This platform was engineered to solve the "context window fragmentation" problem
 
 ## 🛠️ Key Engineering Challenges & Solutions
 
-### 🎯 The "Bus Error" (SIGBUS) Resolution
-**Problem:** During early deployment, the system suffered from binary incompatibility in the `chromadb` library on Linux environments, causing immediate crashes during indexing.
-**Solution:** Diagnosed the root cause to a native library version mismatch (v0.1.1 conflict). Re-engineered the environment to utilize `chromadb==1.5.5`, satisfying specific requirements for the `transformers` and `tokenizers` libraries. This ensured stable memory boundary management for high-load vector operations.
-
----
-
 ## 📦 Tech Stack
 *   **Backend Framework:** FastAPI (Asynchronous execution)
 *   **Vector DB:** ChromaDB (Persistence & Search)
@@ -77,7 +71,5 @@ This platform was engineered to solve the "context window fragmentation" problem
 ## 👨‍💻 Developer
 **Sushmitha Govindaraj**
 *   📧 [sushmitharaj2000@gmail.com](mailto:sushmitharaj2000@gmail.com)
-*   🐙 [GitHub Profile](https://github.com/SushmithaGovindaraj)
-
 ---
 *Developed for excellence in AI-Native Engineering.*
