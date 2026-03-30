@@ -202,7 +202,7 @@ body {
   height: 100%;
   background: linear-gradient(to right, var(--accent), #7c3aed);
   width: 0%;
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .progress-label {
