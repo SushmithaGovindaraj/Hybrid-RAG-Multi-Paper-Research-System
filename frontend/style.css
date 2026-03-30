@@ -515,7 +515,7 @@ body {
   border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.4);
   background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.04);
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px -20px var(--accent-glow);
+  box-shadow: 0 25px 50px -25px var(--accent-glow);
 }
 
 .feature-icon {
