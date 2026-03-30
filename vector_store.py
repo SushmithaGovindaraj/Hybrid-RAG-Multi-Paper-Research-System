@@ -51,7 +51,7 @@ def _get_collection(db_path: str):
 
 # ── public API ───────────────────────────────────────────────────────────────
 
-def add_chunks(chunks: List[Dict[str, Any]], db_path: str) -> int:
+def add_chunks(chunks: List[Dict[str, Any]], db_path: str) -> int: # type: ignore
     """Embed and upsert a list of chunk dicts into ChromaDB."""
     col = _get_collection(db_path)
     texts, ids, metas = [], [], []
