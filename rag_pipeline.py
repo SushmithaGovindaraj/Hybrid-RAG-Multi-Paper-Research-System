@@ -30,7 +30,11 @@ def _get_api_key() -> str:
 def get_sync_client():
     global _SYNC_CLIENT
     if _SYNC_CLIENT is None:
-        import anthropic
+        """
+Synthesis and Orchestration layer.
+Manages hybrid retrieval and multi-paper reasoning.
+"""
+import anthropic
         _SYNC_CLIENT = anthropic.Anthropic(api_key=_get_api_key())
     return _SYNC_CLIENT
 
@@ -38,7 +42,11 @@ def get_sync_client():
 def get_async_client():
     global _ASYNC_CLIENT
     if _ASYNC_CLIENT is None:
-        import anthropic
+        """
+Synthesis and Orchestration layer.
+Manages hybrid retrieval and multi-paper reasoning.
+"""
+import anthropic
         _ASYNC_CLIENT = anthropic.AsyncAnthropic(api_key=_get_api_key())
     return _ASYNC_CLIENT
 
