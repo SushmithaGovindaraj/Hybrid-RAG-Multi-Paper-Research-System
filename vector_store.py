@@ -3,6 +3,10 @@ Vector Store — ChromaDB + sentence-transformers embeddings.
 Supports adding, deleting, and querying chunks with rich metadata filters.
 """
 
+"""
+Persistence layer abstraction for ChromaDB.
+Implements upsert logic for chunked vector embeddings.
+"""
 import chromadb
 from chromadb.config import Settings
 from sentence_transformers import SentenceTransformer
