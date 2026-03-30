@@ -12,3 +12,7 @@ Leverages FastAPI for streaming delivery and ChromaDB for vector persistence.
 - **Database:** ChromaDB (Vector store)
 - **Frontend:** Vanilla JavaScript, Modern CSS Variables
 - **Ingestion:** PyMuPDF, Sentence Transformers
+## Deployment & Setup
+1. Define .env with API keys.
+2. Install dependencies via pip.
+3. Launch uvicorn service.
