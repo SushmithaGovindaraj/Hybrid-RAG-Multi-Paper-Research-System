@@ -27,3 +27,4 @@ Developed by Sushmitha Govindaraj - [sushmitharaj2000@gmail.com](mailto:sushmith
 ## Technical Update 4
 ## Technical Update 5
 ## Technical Update 6
+## Technical Update 7
