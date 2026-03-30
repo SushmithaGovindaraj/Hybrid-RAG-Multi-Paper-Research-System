@@ -23,3 +23,4 @@ Developed by Sushmitha Govindaraj - [sushmitharaj2000@gmail.com](mailto:sushmith
 ### Project Status: Release Candidate 1
 ## Technical Update 1
 ## Technical Update 2
+## Technical Update 3
