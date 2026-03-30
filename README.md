@@ -32,3 +32,4 @@ Developed by Sushmitha Govindaraj - [sushmitharaj2000@gmail.com](mailto:sushmith
 ## Technical Update 9
 ## Technical Update 10
 ## Technical Update 11
+## Technical Update 12
