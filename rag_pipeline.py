@@ -61,7 +61,7 @@ def _format_context(hits: List[Dict[str, Any]]) -> str:
 
 
 QA_PROMPT = """\
-You are an expert academic research assistant with deep knowledge of scientific literature.
+You are an advanced academic research synthesis agent with deep knowledge of scientific literature.
 
 TASK: Answer the user's question based STRICTLY on the provided source excerpts.
 
@@ -82,7 +82,7 @@ ANSWER (cite sources inline, include page numbers):
 """
 
 COMPARE_PROMPT = """\
-You are an expert academic research assistant specializing in systematic literature review.
+You are an advanced academic research synthesis agent specializing in systematic literature review.
 
 TASK: Perform a rigorous cross-paper comparison based on the user's request using the provided excerpts.
 
