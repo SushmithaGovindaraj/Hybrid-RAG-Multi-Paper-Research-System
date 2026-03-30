@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hybrid-RAG-Multi-Paper-Research-System</title>
+  <meta name="description"
+    content="Advanced research assistant utilizing Hybrid RAG for multi-document synthesis and citation-guided analysis." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <!-- Animated Background -->
+  <div class="bg-grid"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <div class="app-shell">
+    <!-- ── SIDEBAR ──────────────────────────────────────── -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <div class="logo-icon">🔗</div>
+          <div>
+            <div class="logo-name" style="font-size: 0.9rem;">Hybrid RAG</div>
+            <div class="logo-sub" style="font-size: 0.55rem;">Multi-Paper Synthesis</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upload Zone -->
+      <div class="upload-section">
+        <div class="upload-zone" id="uploadZone">
+          <div class="upload-icon">📄</div>
+          <div class="upload-title">Drop PDF Papers</div>
+          <div class="upload-sub">or click to browse library</div>
+          <input type="file" id="fileInput" accept=".pdf" multiple hidden />
+        </div>
+        <div class="upload-progress hidden" id="uploadProgress">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="progress-label" id="progressLabel">Analyzing fragments…</div>
+        </div>
+      </div>
+
+      <!-- Paper List -->
+      <div class="papers-section">
+        <div class="section-header">
+          <span class="section-title">Knowledge Library</span>
+          <span class="paper-count" id="paperCount">0</span>
+        </div>
+        <div class="papers-list" id="papersList">
+          <div class="empty-papers">
+            <div class="empty-icon">📂</div>
+            <div>No documents indexed</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mode Selector -->
+      <div class="mode-section">
+        <div class="section-title" style="margin-bottom:12px">Analysis Mode</div>
+        <div class="mode-tabs">
+          <button class="mode-btn active" id="modeAsk" data-mode="ask">Inquiry</button>
+          <button class="mode-btn" id="modeCompare" data-mode="compare">Compare</button>
+          <button class="mode-btn" id="modeSummarize" data-mode="summarize">Synthesis</button>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-section">
+        <div class="stat-item">
+          <div class="stat-val" id="statPapers">0</div>
+          <div class="stat-label">Papers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val" id="statChunks">0</div>
+          <div class="stat-label">Nodes</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── MAIN CONTENT ─────────────────────────────────── -->
+    <main class="main-area">
+      <!-- Top Bar -->
+      <header class="topbar">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <button class="sidebar-toggle" id="sidebarToggle" title="Toggle sidebar">☰</button>
+          <div class="topbar-title" id="topbarTitle">Deep Inquiry mode active</div>
+        </div>
+        <div class="topbar-actions">
+          <button class="btn btn-ghost" id="clearChatBtn" style="color: var(--text-muted); font-size: 0.8rem;">
+            Clear Session 🗑️
+          </button>
+        </div>
+      </header>
+
+      <!-- Welcome Screen -->
+      <div class="welcome-screen" id="welcomeScreen">
+        <div class="welcome-hero">
+          <div class="welcome-icon">📓</div>
+          <h1 class="welcome-title">Research Intelligence</h1>
+          <p class="welcome-sub">Navigate complex literature with semantic precision. Upload your PDFs to begin
+            multi-paper synthesis.</p>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <span class="feature-icon">📍</span>
+            <div class="feature-title">Granular Citations</div>
+            <div class="feature-desc">Direct links to specific pages and sections for verifyable claims.</div>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">⛓️</span>
+            <div class="feature-title">Cross-Reference</div>
+            <div class="feature-desc">Identify common methodologies and conflicting data across papers.</div>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🧬</span>
+            <div class="feature-title">Hybrid Retrieval</div>
+            <div class="feature-desc">Combining vector embeddings with semantic structure for better context.</div>
+          </div>
+        </div>
+
+        <div class="quick-prompts">
+          <div class="qp-list" id="quickPrompts">
+            <button class="qp-btn" data-prompt="What is the main contribution of this research?">Main
+              Contribution</button>
+            <button class="qp-btn" data-prompt="Compare the methodologies used in these papers.">Compare
+              Methodology</button>
+            <button class="qp-btn" data-prompt="Summarize the experimental findings and metrics.">Synthesis
+              Findings</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Interface -->
+      <div class="chat-area hidden" id="chatArea">
+        <div class="messages-container" id="messagesContainer"></div>
+      </div>
+
+      <!-- Global Input Area -->
+      <div class="input-area">
+        <div class="paper-filter hidden" id="paperFilter">
+          <div class="filter-label">Filter Knowledge Base</div>
+          <div class="filter-tags" id="filterTags"></div>
+        </div>
+
+        <div class="input-row">
+          <div class="textarea-wrap">
+            <textarea id="questionInput" placeholder="Query the database…" rows="1"></textarea>
+          </div>
+          <button class="send-btn" id="sendBtn" title="Execute Query">
+            <span class="send-icon">➤</span>
+          </button>
+        </div>
+
+        <div class="input-hint">
+          <span id="selectedPapersHint">Global analysis active</span> ·
+          <span>Shift+Enter for newline</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- ── CITATIONS DRAWER ──────────────────────────────── -->
+    <aside class="citations-panel hidden" id="citationsPanel">
+      <div class="citations-header">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 1.2rem;">📍</span>
+          <span>Source Citations</span>
+        </div>
+        <button class="close-citations" id="closeCitations">✕</button>
+      </div>
+      <div class="citations-list" id="citationsList"></div>
+    </aside>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="/static/app.js"></script>
+</body>
+
+</html>
